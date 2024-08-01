@@ -1,158 +1,154 @@
-
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-}
-ul {
-    list-style: none;
-}
-a {
-    text-decoration: none;
-    text-transform: none;
+*{
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body {
-    background-color: rgb(17, 17, 17);;
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #111;
 }
 
-div#imagem {
-    background-image: url(imagens/6.jpg);
-    background-size: cover;
-    background-position: center center;
-    width: 99%;
-    height: 350px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 8px rgba(146, 146, 146, 0.274);
-    display: inline-block;
+.row__poster{
+  width: 100%;
+  object-fit: contain;
+  max-height: 200px;
+  margin-right: 100px;
+  transition: transform 450ms;
+  border-radius: 10px;
 }
 
-img#logo {
-    position: absolute;
-    bottom: 93%;
-    size: 5px;
-    width: 70px;
-}
-h5#navegar {
-    color: white;
-    position: absolute;
-    bottom: 95.4%;
-    left: 25%;
-    font-size: 0.7em;
+.row__posters{
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding: 20px;
 }
 
-#lupa {
-    position: absolute;
-    top: 2.3%;
-    left: 78%;
-    color: white;
-    width: 30px;
-
+.row__poster:hover{
+  transform: scale(1.08);
 }
 
-#sino {
-    position: absolute;
-    top: 2%;
-    left: 70%;
-    color: white;
-}
-div#icon {
-    background-image: url(imagens/9.jpg);
-    background-position: right right;
-    background-size: cover;
-    position: absolute;
-    top: 2%;
-    left: 87%;
-    width: 30px;
-    height: 30px;
-    border-radius: 5px;
+.row__posters::-webkit-scrollbar{
+  display: none;
 }
 
-p#titulo {
-    font-family: Arial, Helvetica, sans-serif;
-    color: white;
-    font-size: 1.7em;
-    text-transform: uppercase;
-    position: absolute;
-    top: 13%;
-    left: 3%;
-}
-p#subtitulo {
-    color: white;
-    font-size: 0.8em;
-    position: absolute;
-    top: 30%;
-    left: 3%;
+.row__posterLarge{
+  max-height: 300px;
 }
 
-div#play{
-    display: inline-block;
-    color: black;
-    background-color: white;
-    width: 112px;
-    height: 35px;
-    position: absolute;
-    top: 40%;
-    left: 3%;
-    border-radius: 3px;
-    text-align: center;
-    font-size: 1.3em;
-
-    
+.row__posterLarge:hover{
+  transform: scale(1.09);
 }
 
-
-
-
-
-ul#tp {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 30%);
-    display: flex;
-    
-
+.row{
+  color: white;
+  margin-left: 20px;
 }
 
-p#alta {
-    color: white;
-    font-size: 1.2em;
-    position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate( -241%, 110%);
+.banner{
+  background-image: url(imagens/tres\ \(1\).jpg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  object-fit: contain;
+  height: 650px;
 }
 
-ul#tp img {
-    
-    width: 155px;
-    margin: 10px;
-    border-radius: 1px;
-    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.136);
+.banner__contents{
+  margin-left: 30px;
+  padding-top: 300px;
+  height: 500px;
 }
 
-p#novamente {
-    color: white;
-    font-size: 1.2em;
-    position: absolute;
-        top: 80%;
-        left: 50%;
-        transform: translate( -92%, -50%);
+.banner__title{
+  font-size: 3rem;
+  font-weight: 300;
+  padding-bottom: 100px;
+  text-transform: uppercase;
 }
 
-
-ul#sp {
-    position: absolute;
-    top: 90%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: flex;
+.banner__description{
+  width: 45rem;
+  line-height: 1.3;
+  padding-top: 1rem;
+  font-size: 0.8rem;
+  max-width: 360px;
+  height: 180px;
 }
 
-ul#sp img {
-    width: 155px;
-    margin: 10px;
-    border-radius: 2px;
-    box-shadow: 1px 1px 1px rgba(255, 255, 255, 0.136);
+.banner__button{
+  cursor: pointer;
+  color: #fff;
+  outline: none;
+  border: none;
+  font-weight: 700;
+  border-radius: 0.2vw;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: rgba(51, 51, 51, 0.5);
+}
+
+.banner__button:hover{
+  color: #000;
+  background-color: #e6e6e6;
+  transition: all 0.2s;
+}
+
+.banner--fadeBottom{
+  margin-top: 40px;
+  height: 7.4rem;
+  background-image: linear-gradient(180deg, transparent, rgba(37, 37, 37, 0.61), #111);
+}
+
+.nav__logo{
+  width: 80px;
+  object-fit: contain;
+}
+
+.nav__avatar{
+  width: 30px;
+  object-fit: contain;
+}
+
+.nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  z-index: 1;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+
+.nav__black{
+  background-color: #111;
+}
+
+@media screen and (min-width: 900px) {
+  .banner__title {
+  font-size: 3rem;
+  font-weight: 700;
+  padding-bottom: 0.3rem;
+  margin-right: 10px;
+}
+
+.banner{
+  background-image: url(imagens/tres\ \(1\).jpg);
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  object-fit: contain;
+  height: 650px;
+}
+
+.banner__contents{
+  margin-left: 30px;
+  padding-top: 300px;
+  height: 500px;
+}
 }
